@@ -1,0 +1,7 @@
+<input class="checkbox" type="checkbox" name="comprado" id="comprado" [checked]="item.comprado" [(ngModel)]="item.comprado">
+<p class="description {{item.comprado ? 'line-through' : ''}}">{{item.nome}}</p>
+<div class="d-contents" *ngIf="!item.comprado">
+  <fa-icon class="delete-icon" (click)="deletarItem()" [icon]="faTrash"></fa-icon>
+  <fa-icon class="edit-icon" (click)="editarItem()" [icon]="faPen"></fa-icon>
+</div>
+<small class="date">{{item.data}}</small>
